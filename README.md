@@ -10,4 +10,8 @@ Build v.: 0.1
 
 ### Make
 
-All the to you can see [here](https://github.com/marviorocha/notifycustomers/issues/2)
+All the to do you can see [here](https://github.com/marviorocha/notifycustomers/issues/2)
+
+### Developer
+
+This a porject developer by Marvio Rocha [www.marviorocha.com](https://www.marviorocha.com)
