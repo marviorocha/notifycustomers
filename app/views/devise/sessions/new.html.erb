@@ -1,0 +1,47 @@
+<div class="login-form">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group">
+
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Digite seu e-mail", class: "form-control"  %>
+
+        </div>
+            <div class="form-group">
+              <%= f.label :password %>
+              <%= f.password_field :password, autocomplete: "current-password", class: "form-control"  %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+
+
+        <% end %>
+
+        <div class="checkbox">
+            <label>
+                <%= f.label :remember_me %>
+                      <%= f.check_box :remember_me %>
+            </label>
+                    <label class="pull-right">
+                <a href="#">Esqueceu sua senha?</a>
+            </label>
+
+                </div>
+                    <%= f.submit "Acessar", class: "btn btn-success btn-flat m-b-30 m-t-30" %>
+
+                <!-- <div class="social-login-content">
+                    <div class="social-button">
+                        <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Sign in with facebook</button>
+                        <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Sign in with twitter</button>
+                    </div>
+                </div> -->
+                <!-- <div class="register-link m-t-15 text-center">
+                    <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+                </div> -->
+<% end %>
+</div>
+
+
+
+
+
+<%# render "devise/shared/links" %>

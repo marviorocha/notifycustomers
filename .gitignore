@@ -23,7 +23,7 @@
 
 /node_modules
 /yarn-error.log
-
+/public/sufee-admin
 /public/assets
 .byebug_history
 
