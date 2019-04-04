@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
   layout :template_resource
+  helper :all
 
     private
 

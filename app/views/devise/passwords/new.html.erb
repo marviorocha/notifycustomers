@@ -1,16 +1,37 @@
-<h2>Forgot your password?</h2>
+<% title('Recuperar senha') %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+<div class="login-form">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="form-group">
+
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Digite seu e-mail", class: "form-control"  %>
+
+        </div>
+        <div class="form-group">
+          <%= f.submit "Lembrar-me", class: "btn btn-success btn-flat m-b-30 m-t-30" %>
+
+        </div>
+
+                <!-- <div class="social-login-content">
+                    <div class="social-button">
+                        <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Sign in with facebook</button>
+                        <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Sign in with twitter</button>
+                    </div>
+                </div> -->
+                <!-- <div class="register-link m-t-15 text-center">
+                    <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+                </div> -->
+                <p><%= render "devise/shared/links" %></p>
+              </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
+
+
+
+<%# render "devise/shared/links" %>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Login - Sistema Custumers</title>
+    <% title = yield(:title)  %>
+    <title><%= title  || 'Notify Custumers v0.1' %> <%= tags['company_name'] %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +23,7 @@
               <div class="login-content">
                   <div class="login-logo">
                       <a href="#">
-                        <h3 style="color:#fff"> Notify Custumer v0.1</h3>
+                        <h3 style="color:#fff"> <%= title || 'Notify Costumers v0.1' %></h3>
                           <!-- <img class="align-content" src="images/logo.png" alt=""> -->
                       </a>
                   </div>

@@ -6,7 +6,7 @@ Things you may want to cover:
 
 ### Version:
 
-Build v.: 0.1
+Build vesion: [v0.1](https://github.com/marviorocha/notifycustomers/releases)
 
 ### Make
 
@@ -14,4 +14,4 @@ All the to do you can see [here](https://github.com/marviorocha/notifycustomers/
 
 ### Developer
 
-This a porject developer by Marvio Rocha [www.marviorocha.com](https://www.marviorocha.com)
+This a project developer by Marvio Rocha [www.marviorocha.com](https://www.marviorocha.com)

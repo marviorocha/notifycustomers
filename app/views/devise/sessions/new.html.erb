@@ -1,5 +1,7 @@
 <div class="login-form">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
         <div class="form-group">
 
             <%= f.label :email %>
@@ -22,7 +24,9 @@
                       <%= f.check_box :remember_me %>
             </label>
                     <label class="pull-right">
-                <a href="#">Esqueceu sua senha?</a>
+                      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                        <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+                      <% end %>
             </label>
 
                 </div>
