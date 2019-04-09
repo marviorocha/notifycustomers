@@ -13,10 +13,10 @@
 //= require jquery/dist/jquery.min
 //= require popper.js/dist/umd/popper.min
 //= require bootstrap/dist/js/bootstrap.min
-//= require_tree .
 //= require chart.js/dist/Chart.bundle.min
 //= require jqvmap/dist/jquery.vmap.min
 //= require jqvmap/examples/js/jquery.vmap.sampledata
 //= require jqvmap/dist/maps/jquery.vmap.world
 //= require rails-ujs
 //= require activestorage
+//= require_tree .
