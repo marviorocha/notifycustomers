@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_04_09_184257) do
 
   create_table "clients", force: :cascade do |t|
-    t.integer "cel"
-    t.integer "tel"
+    t.string "cel"
+    t.string "tel"
     t.integer "cpf"
     t.date "birthday"
     t.string "type"

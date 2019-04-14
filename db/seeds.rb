@@ -19,8 +19,8 @@ User.create(
 name: Faker::Name.name,
 last_name: Faker::Name.last_name,
 email: Faker::Internet.email,
-password: '123456',
-password_confirmation:'123456',
+password: '12345678',
+password_confirmation:'12345678',
 role: "user")
 
 end
