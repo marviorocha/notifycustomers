@@ -5,7 +5,6 @@ ruby '2.5.3'
 
 
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
-gem 'pg'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
@@ -33,6 +32,12 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 
 group :test do
 
