@@ -1,8 +1,5 @@
 {
   "name": "notifycustomers",
-  "engines": {
-  "yarn": ">= 0.25.2"
-  },
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.3",
