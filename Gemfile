@@ -5,8 +5,7 @@ ruby '2.5.3'
 
 
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
-
-gem 'sqlite3'
+gem 'pg'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
@@ -27,9 +26,9 @@ end
 
 group :development do
 
+  gem 'sqlite3'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
