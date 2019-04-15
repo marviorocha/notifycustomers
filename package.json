@@ -18,7 +18,7 @@
     "jqvmap": "^1.5.1",
     "animate.css": "^3.7.0",
     "flag-icon-css": "^3.2.0",
-    "@icon/themify-icons": "^0.1.2",
+    "@icon/themify-icons": "^1.0.6",
     "selectFX": "git://github.com/codrops/SelectInspiration/",
     "jquery-validation-unobtrusive": "^3.2.10",
     "jquery-validation": "^1.18.0"
