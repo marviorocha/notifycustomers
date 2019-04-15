@@ -35,8 +35,13 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   #config.assets.js_compressor = :uglifier
-  config.assets.css_compressor = :sass
+  #config.assets.css_compressor = :sass
   config.assets.js_compressor = Uglifier.new(harmony: true)
+
+  config.assets.compile = false #To stop run time assets precompile in production.
+  config.assets.digest = true  #To access assets which are precompiled and in their names have appendend digets by rails
+  config.cache_classes = true #allowing caching assets
+
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
   #config.serve_static_assets = true
