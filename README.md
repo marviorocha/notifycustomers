@@ -1,4 +1,8 @@
+[![Build Status](https://travis-ci.org/marviorocha/notifycustomers.svg?branch=master)](https://travis-ci.org/marviorocha/notifycustomers)
+
 # README
+
+
 
 This a project where we work easily with notfys of customers Hested by Heroku (https://customersnotify.herokuapp.com)
 
