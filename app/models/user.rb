@@ -6,8 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  private
-  before_create :client_created
+ 
+  after_create  :client_created
 
   def client_created
     @user = User.last

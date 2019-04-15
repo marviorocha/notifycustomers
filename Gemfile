@@ -16,7 +16,7 @@ gem 'uglifier'
 gem 'devise'
 gem 'faker'
 gem 'whenever'
-
+gem 'onesignal'
 # End My Gems
 
 gem 'bootsnap'
