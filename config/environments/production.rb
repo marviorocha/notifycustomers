@@ -40,11 +40,10 @@ Rails.application.configure do
 
   config.assets.compile = false #To stop run time assets precompile in production.
   config.assets.digest = true  #To access assets which are precompiled and in their names have appendend digets by rails
-  config.cache_classes = true #allowing caching assets
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
-  #config.serve_static_assets = true
+
+  config.serve_static_assets = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
