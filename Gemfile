@@ -16,6 +16,7 @@ gem 'devise'
 gem 'faker'
 gem 'whenever'
 gem 'onesignal'
+gem 'sendgrid-ruby'
 # End My Gems
 
 gem 'bootsnap'
