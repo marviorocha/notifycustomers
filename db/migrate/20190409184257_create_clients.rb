@@ -3,7 +3,7 @@ class CreateClients < ActiveRecord::Migration[5.2]
     create_table :clients do |t|
       t.string :cel
       t.string :tel
-      t.integer :cpf
+      t.string :cpf
       t.date :birthday
       t.string :type
       t.references :user, foreign_key: true

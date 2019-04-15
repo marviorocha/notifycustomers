@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_184257) do
   create_table "clients", force: :cascade do |t|
     t.string "cel"
     t.string "tel"
-    t.integer "cpf"
+    t.string "cpf"
     t.date "birthday"
     t.string "type"
     t.integer "user_id"
