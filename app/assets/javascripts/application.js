@@ -18,4 +18,3 @@
 //= require jqvmap/dist/maps/jquery.vmap.world
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
