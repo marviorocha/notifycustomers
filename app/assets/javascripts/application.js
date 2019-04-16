@@ -11,11 +11,10 @@
 // about supported directives.
 //= require jquery/dist/jquery.min
 //= require rails-ujs
-//= require bootstrap/dist/js/bootstrap.min
 //= require popper.js/dist/umd/popper.min
-//= require chart.js/dist/Chart.bundle.min
-//= require js/chart-js/chartjs-init
-//= require js/dashboard
+//= require bootstrap/dist/js/bootstrap.min
 //= require js/main
+//= require chart.js/dist/Chart.bundle.min
+//= require js/dashboard
 //= require js/widgets
 //= require activestorage
