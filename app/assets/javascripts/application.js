@@ -13,6 +13,8 @@
 //= require rails-ujs
 //= require bootstrap/dist/js/bootstrap.min
 //= require popper.js/dist/umd/popper.min
+//= require chart.js/dist/Chart.bundle.min
+//= require js/chart-js/chartjs-init
 //= require js/dashboard
 //= require js/main
 //= require js/widgets
