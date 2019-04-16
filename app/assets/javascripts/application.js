@@ -20,4 +20,5 @@
 //= require js/dashboard
 //= require js/main
 //= require js/widgets
+//= require rails-ujs
 //= require activestorage
