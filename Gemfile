@@ -15,11 +15,12 @@ gem 'devise'
 gem 'faker'
 gem 'whenever'
 gem 'onesignal'
-gem 'font-awesome-rails'
+
 
 # End My Gems
 
 gem 'bootsnap'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -36,7 +37,7 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
+
 end
 
 
