@@ -39,8 +39,7 @@ Rails.application.configure do
   config.assets.js_compressor = Uglifier.new(harmony: true)
 
   config.assets.compile = false #To stop run time assets precompile in production.
-  config.assets.digest = true  #To access assets which are precompiled and in their names have appendend digets by rails
-
+ 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
 
 
