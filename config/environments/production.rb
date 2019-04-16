@@ -27,7 +27,8 @@ Rails.application.configure do
                                          :authentication => :plain,
                                          :enable_starttls_auto => true
                                          }
-  #config.action_mailer.default_url_options = { :host => "dev.local.me:3000" }
+
+ config.action_mailer.default_url_options = { :host => "customersnotify.herokuapp.com" }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -39,7 +40,7 @@ Rails.application.configure do
   config.assets.js_compressor = Uglifier.new(harmony: true)
 
   config.assets.compile = false #To stop run time assets precompile in production.
- 
+
   # Do not fallback to assets pipeline if a precompiled asset is missed.
 
 
