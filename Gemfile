@@ -15,6 +15,7 @@ gem 'devise'
 gem 'faker'
 gem 'whenever'
 gem 'onesignal'
+gem 'font-awesome-rails'
 
 # End My Gems
 
