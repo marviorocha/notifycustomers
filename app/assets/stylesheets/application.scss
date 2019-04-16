@@ -14,6 +14,11 @@
  *= require flag-icon-css/css/flag-icon.min
  *= require selectFX/css/cs-skin-elastic
  *= require jqvmap/dist/jqvmap.min
- *= require_tree .
  *= require_self
+ *= require animate.css/animate.min.css
+ *= require scss/_gauge
+ *= require scss/_gauge
+ *= require scss/_variables
+ *= require scss/_widgets
+ *= require scss/style
  */

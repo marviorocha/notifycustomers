@@ -16,5 +16,8 @@
 //= require jqvmap/dist/jquery.vmap.min
 //= require jqvmap/examples/js/jquery.vmap.sampledata
 //= require jqvmap/dist/maps/jquery.vmap.world
+//= require js/dashboard
+//= require js/main
+//= require js/widgets
 //= require rails-ujs
 //= require activestorage
