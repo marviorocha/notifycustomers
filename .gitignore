@@ -24,7 +24,6 @@
 
 /yarn-error.log
 /public/sufee-admin
-/public/assets
 /node_modules
 .byebug_history
 
