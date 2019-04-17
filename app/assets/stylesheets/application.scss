@@ -11,14 +11,14 @@
  * It is generally better to create a new file per style scope.
  *= require bootstrap/dist/css/bootstrap.min.css
  *= require font-awesome-overwrite
- *= require flag-icon-css/css/flag-icon.min
  *= require selectFX/css/cs-skin-elastic
  *= require jqvmap/dist/jqvmap.min
- *= require_self
  *= require animate.css/animate.min.css
- *= require scss/_gauge
  *= require scss/_gauge
  *= require scss/_variables
  *= require scss/_widgets
  *= require scss/style
+ *= require_self
  */
+
+ 
