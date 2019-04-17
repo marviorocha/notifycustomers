@@ -16,7 +16,6 @@ gem 'faker'
 gem 'whenever'
 gem 'onesignal'
 
-
 # End My Gems
 gem 'bootsnap', require: false
 
