@@ -10,12 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require jquery/dist/jquery.min.js
 //= require rails-ujs
+//= require jquery/dist/jquery.min.js
 //= require popper.js/dist/umd/popper.min
 //= require bootstrap/dist/js/bootstrap.min
 //= require js/main
 //= require chart.js/dist/Chart.bundle.min
+//= require js/dashboard
+//= require js/widgets
 //= require jqvmap/dist/jquery.vmap.min
 //= require jqvmap/examples/js/jquery.vmap.sampledata
 //= require jqvmap/dist/maps/jquery.vmap.world

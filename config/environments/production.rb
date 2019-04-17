@@ -39,7 +39,7 @@ Rails.application.configure do
   #config.assets.css_compressor = :sass
   config.assets.js_compressor = Uglifier.new(harmony: true)
 
-  config.assets.compile = true #To stop run time assets precompile in production.
+  config.assets.compile = false #To stop run time assets precompile in production.
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
 

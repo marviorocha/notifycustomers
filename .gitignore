@@ -24,7 +24,6 @@
 
 /yarn-error.log
 /public/sufee-admin
-/node_modules
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
