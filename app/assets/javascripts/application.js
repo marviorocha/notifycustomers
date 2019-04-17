@@ -11,8 +11,6 @@
 // about supported directives.
 
 //= require jquery/dist/jquery.min.js
-//= require rails-ujs
-
 //= require popper.js/dist/umd/popper.min
 //= require bootstrap/dist/js/bootstrap.min
 //= require js/main
@@ -20,3 +18,4 @@
 //= require jqvmap/dist/jquery.vmap.min
 //= require jqvmap/examples/js/jquery.vmap.sampledata
 //= require jqvmap/dist/maps/jquery.vmap.world
+//= require rails-ujs
