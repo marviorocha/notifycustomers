@@ -12,6 +12,7 @@
 
 //= require rails-ujs
 //= require jquery/dist/jquery.min.js
+//= require bootstrap/dist/js/bootstrap.min
 //= require popper.js/dist/umd/popper.min
 //= require chart.js/dist/Chart.bundle.min
 //= require js/main
@@ -20,4 +21,3 @@
 //= require jqvmap/dist/jquery.vmap.min
 //= require jqvmap/examples/js/jquery.vmap.sampledata
 //= require jqvmap/dist/maps/jquery.vmap.world
-//= require bootstrap/dist/js/bootstrap.min
