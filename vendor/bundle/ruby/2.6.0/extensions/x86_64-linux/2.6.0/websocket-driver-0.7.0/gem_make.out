@@ -1,0 +1,15 @@
+current directory: /home/marviorocha/www/notifycustomers/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/home/marviorocha/.rvm/rubies/ruby-2.6.3/bin/ruby -I /home/marviorocha/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0 -r ./siteconf20190420-9728-1bg3vwh.rb extconf.rb
+creating Makefile
+
+current directory: /home/marviorocha/www/notifycustomers/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/marviorocha/www/notifycustomers/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/marviorocha/www/notifycustomers/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20190420-9728-15idkf7

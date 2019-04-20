@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
@@ -8,7 +7,7 @@ gem 'rails'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
-
+gem 'pg'
 # My Gems
 
 gem 'devise'
@@ -24,23 +23,9 @@ group :development, :test do
 end
 
 group :development do
-
   gem 'sqlite3'
   gem 'web-console'
   gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-end
-
-group :production do
-  gem 'pg'
-
-end
-
-
-group :test do
-
-  gem 'capybara'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem 'spring-watcher-listen'
 end
