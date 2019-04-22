@@ -4,22 +4,17 @@ class ClientsController < ApplicationController
   # GET /clients
   def index
 
-
     onsignal = OneSignal::Client.new(auth_token: 'YTFmZmQ0MjQtNmRkYy00MTM3LWFjNGMtNGU5NTIxNWNkZjBj',
                                     app_id: 'ffc48929-efe2-494c-a3ce-8e23528623f8')
-
     params = {"app_id" => "ffc48929-efe2-494c-a3ce-8e23528623f8",
               "headings" => {"pt-br"=> 'Bem-vindo ao Custumers Notify'},
               "chrome_web_icon" => '',
               "contents" => {"pt-br" => ''},
               "send_after" => Time.now,
               "included_segments" => ["All"]}
-
     onsignal.notifications.create(params)
 
-
-
-    @user =  User.where(role: 'user')
+    @user =  User.where(role: "user")
 
   end
 
@@ -65,11 +60,11 @@ class ClientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client
-      @client = Client.find(params[:id])
+      @client = User.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def client_params
-      params.fetch(:client, {})
+      params.require(:client).permit(:birhday, :cel)
     end
 end

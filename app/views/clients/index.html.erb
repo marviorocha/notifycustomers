@@ -26,7 +26,7 @@
         <div class="content mt-3">
             <div class="animated fadeIn">
                 <div class="row">
-
+<%= link_to 'Criar Novo Cliente', new_client_path %>
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
@@ -39,21 +39,23 @@
                                             <th>Nome</th>
                                             <th>E-mail</th>
                                             <th>Criado em:</th>
+                                            <th>Aniversário:</th>
                                             <th>Ação</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                      <% @user.each do |client| %>
+                                      <% @user.each do |c| %>
                                         <tr>
-                                            <td><b><%= client.name %></b></td>
-                                            <td><%= client.email %></td>
-                                            <td><%= client.created_at.strftime("%-d / %m / %Y") %></td>
+                                            <td><b><%= c.name %></b></td>
+                                            <td><%= c.email %></td>
+                                            <td><%= c.created_at.strftime("%-d/%m/%Y") %></td>
+                                            <td><%= c.client.birthday.strftime("%-d/%m/%Y") %></td>
                                             <td>
 
-                                        <a href="<%= edit_client_path(client) %>"  class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>
+                                        <a href="<%= edit_client_path(c) %>"  class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>
 
                                        <%= link_to "<i class='fa fa-trash' ></i> Delete".html_safe,
-                                           client_path(client),
+                                           client_path(c),
                                          method: :delete, data: { confirm: 'Você realmente deseja deletar ?' }, class: "btn btn-danger"  %>
 
 
@@ -70,6 +72,3 @@
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->
-
-
-<%= link_to 'New Client', new_client_path %>
