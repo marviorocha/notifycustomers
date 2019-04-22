@@ -21,7 +21,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Gerenciar</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-puzzle-piece"></i><a href="<%= clients_path %>">Listar Clientes</a></li>
+                        <li><i class="fa fa-list"></i><a href="<%= clients_path %>">Listar Clientes</a></li>
+                        <li><i class="fa fa-plus-circle"></i><%= link_to 'Novo Cliente', new_client_path %></li>
+
+
                         <!-- <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Lorem ipson</a></li>
                         <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Lorem ipson</a></li>
                         <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Lorem ipson</a></li>

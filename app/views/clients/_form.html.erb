@@ -1,4 +1,4 @@
-
+<% title('Criar Novo Cliente') %>
 <div class="content mt-3">
     <div class="animated fadeIn">
 
@@ -6,32 +6,55 @@
 
         <div class="col-lg-8">
             <div class="card">
-                <div class="card-header"> <%= title('Criar Novo Cliente') %></div>
+                <div class="card-header"> <%= 'Dados do Cliente' %> </div>
                 <div class="card-body card-block">
 
-                  <%= form_with method: :client do |f| %>
+                  <%= form_with model: Client do |f| %>
 
 
-                      <div class="form-group">
-                        <div class="input-group">
-                          <%= f.label :name %><br />
-                          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-                        </div>
+                  <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                      <%= f.label :name, t('Nome') %>:
+                      <%= f.text_field :name, placeholder: 'Digite o nome', class: "form-control" %>
                       </div>
 
-                      <div class="form-group">
-                        <div class="input-group">
-                          <%= f.label :last_name %><br />
-                          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
-                        </div>
+                      <div class="form-group col-md-6">
+                        <%= f.label :last_name, 'Sobre nome' %>:
+                        <%= f.text_field :last_name, placeholder: 'Sobre nome', autofocus: true, autocomplete: "last_name", class: "form-control" %>
                       </div>
 
-                      <div class="form-group">
-                        <div class="input-group">
-                          <%= f.label :email %><br />
-                          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                        </div>
+                      <div class="form-group col-md-6">
+
+                          <%= f.label :email %>:
+                          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
                       </div>
+                      <div class="form-group">
+
+                          <%= f.label :birhday, 'Data de aniversário' %>:
+                          <%= f.date_field :birhday, autofocus: true, autocomplete: "date", class: "form-control" %>
+
+                      </div>
+
+                      <div class="form-group col-md-6">
+
+                          <%= f.label :tel, 'Telefone:' %>
+                          <%= f.text_field :tel, autofocus: true, class: "form-control" %>
+                      </div>
+                      <div class="form-group col-md-6">
+
+                          <%= f.label :cel, 'Celular:' %>
+                          <%= f.text_field :cel, autofocus: true, class: "form-control" %>
+                      </div>
+                      <div class="form-group col-md-6">
+
+                          <%= f.label :cpf, 'CPF:' %>
+                          <%= f.text_field :cpf, autofocus: true, class: "form-control" %>
+                      </div>
+
+
+  </div>
+
 
 
                         <div class="form-actions form-group">
@@ -44,4 +67,4 @@
 
               </div>
             </div>
-        </div>
+    </div>
