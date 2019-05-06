@@ -4,7 +4,7 @@
 
 
 
-This a project where we work easily with notfys of customers Hested by Heroku (https://customersnotify.herokuapp.com)
+This a project where we work easily with notfys of customers Hested by Heroku (https://notifycustomers.herokuapp.com/)
 
 Things you may want to cover:
 

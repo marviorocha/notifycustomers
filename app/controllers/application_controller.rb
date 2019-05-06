@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
 
     def params_device
       added_attrs = [:name, :last_name, :email, :password, :password_confirmation, :remember_me, :role]
+      
       devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
       devise_parameter_sanitizer.permit :account_update, keys: added_attrs
     end

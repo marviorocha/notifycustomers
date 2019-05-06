@@ -13,15 +13,17 @@
 ActiveRecord::Schema.define(version: 2019_04_09_184257) do
 
   create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.string "last_name"
+    t.string "email"
     t.string "cel"
     t.string "tel"
     t.string "cpf"
+    t.string "address"
     t.date "birthday"
     t.string "type"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

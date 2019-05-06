@@ -15,12 +15,11 @@ user = User.create([{name: 'Administrador', last_name: 'Sales', email: "admin@ad
 
 10.times do |i|
 
-User.create(
+Client.create(
 name: Faker::Name.name,
 last_name: Faker::Name.last_name,
 email: Faker::Internet.email,
-password: '12345678',
-password_confirmation:'12345678',
-role: "user")
+birthday: Faker::Date.birthday(18, 65) )
+
 
 end
