@@ -13,6 +13,7 @@ gem 'devise'
 gem 'faker'
 gem 'whenever'
 gem 'onesignal'
+gem 'will_paginate'
 
 # End My Gems
 gem 'bootsnap', require: false

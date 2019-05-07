@@ -9,13 +9,13 @@
                 <div class="card-header"> <%= 'Dados do Cliente' %> </div>
                 <div class="card-body card-block">
 
-                  <%= form_with model: Client, local:true do |f| %>
+                  <%= form_with model: client, local:true do |f| %>
 
 
                   <div class="form-row">
 
                     <div class="form-group col-md-6">
-                      <%= f.label :name, t('Nome') %>:
+                      <%= f.label :name, 'Nome' %>:
                       <%= f.text_field :name, placeholder: 'Digite o nome', class: "form-control" %>
                       </div>
 
@@ -32,13 +32,13 @@
 
                       <div class="form-group">
 
-                          <%= f.label :birhday, 'Data de aniversário' %>:
-                          <%= f.date_field :birthday, autofocus: true, autocomplete: "date", class: "form-control" %>
+                          <%= f.label :birthday, 'Data de aniversário' %>:
+                          <%= f.date_field :birthday, autocomplete: "date", class: "form-control" %>
 
                       </div>
                       <div class="form-group col-md-12">
                           <%= f.label :address, 'Endereço:' %>
-                          <%= f.text_area :address, autofocus: true, class: "form-control" %>
+                          <%= f.text_area :address, class: "form-control" %>
                       </div>
                       <div class="form-group col-md-6">
                           <%= f.label :cpf, 'CPF:' %>
@@ -49,12 +49,12 @@
                       <div class="form-group col-md-6">
 
                           <%= f.label :tel, 'Telefone:' %>
-                          <%= f.text_field :tel, autofocus: true, class: "form-control" %>
+                          <%= f.text_field :tel,  class: "form-control" %>
                       </div>
                       <div class="form-group col-md-6">
 
                           <%= f.label :cel, 'Celular:' %>
-                          <%= f.text_field :cel, autofocus: true, class: "form-control" %>
+                          <%= f.text_field :cel, class: "form-control" %>
                       </div>
 
 
@@ -65,7 +65,12 @@
 
                         <div class="form-actions form-group">
 <p></p>
-                          <%= f.submit "Enviar", class: 'btn btn-success ' %>
+                        <div class="text-left">
+                            <%= f.submit "Salvar", class: 'btn btn-success ' %>
+                        </div>
+                            <div class="text-right">
+                              <%= link_to 'Voltar', clients_path, class: "btn btn-info" %>
+                            </div>
 
                       </div>
                       <% end %>

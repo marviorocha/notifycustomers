@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create([{name: 'Administrador', last_name: 'Sales', email: "admin@admin.com",
-                      password: "admin123", role: 'admin' }])
-
+# user = User.create([{name: 'Administrador', last_name: 'Sales', email: "admin@admin.com",
+#                       password: "admin123", role: 'admin' }])
+#
 
 
 # User default client
 
-10.times do |i|
+50.times do |i|
 
 Client.create(
 name: Faker::Name.name,

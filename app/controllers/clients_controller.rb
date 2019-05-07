@@ -13,9 +13,19 @@ class ClientsController < ApplicationController
     #           "included_segments" => ["All"]}
     # onsignal.notifications.create(params)
 
-    @client =  Client.order(id: :desc)
+
+    @client =  Client.order(id: :desc).paginate(:page => params[:page], per_page: 15)
 
   end
+
+
+    # GET /clients/birthday
+
+  def birthday
+    @m = Time.now.strftime("%m")
+    @birthday = Client.where(["birthday LIKE ?","%#{@m}___"])
+  end
+
 
   # GET /clients/1
   def show
@@ -28,7 +38,7 @@ class ClientsController < ApplicationController
 
   # GET /clients/1/edit
   def edit
- 
+
   end
 
   # POST /clients

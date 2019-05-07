@@ -1,5 +1,46 @@
-<p id="notice"><%= notice %></p>
+<%= render 'shered/breadcromb' %>
 
- <%= @client.name %>
- <%= @client.email %>
-  <%= @client.birthday %>
+<div class="animated fadeIn">
+
+                <div class="ui-typography">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong class="card-title" v-if="headerText">ID #<%= @client.id %> </strong>
+                                </div>
+
+                                <div class="card-body">
+
+                              <div class="typo-headers">
+
+                                <h3 class="pb-2 display-5"><b>Nome:</b>  <%= @client.name %></h3>
+                                <h4 class="pb-2 display-5"><b>E-mail:</b>  <%= @client.email %> </h4>
+                                <h4 class="pb-2 display-5"><b>Telefone:</b>  <%= @client.tel %> </h4>
+                                <h4 class="pb-2 display-5"><b>Celular:</b> <%= @client.cel %> </h4>
+                                <h4 class="pb-2 display-5"><b>Cpf:</b>  <%= @client.cpf %> </h4>
+                                <h4 class="pb-2 display-5"><b>Endereço:</b>  <%= @client.address %> </h4>
+                                <h4 class="pb-2 display-5"><b>Aniversário:</b>  <%= @client.birthday.strftime("%d/%m/%Y") %> </h4>
+
+                            </div>
+                          <%= link_to 'Editar', edit_client_path(@client.id), class: 'btn btn-primary' %>
+                    </div>
+                </div>
+            </div>
+
+  </div>
+</div>
+
+                    </div>
+                </div>
+
+
+</div>
+</div>
+</div>
+
+
+
+ 

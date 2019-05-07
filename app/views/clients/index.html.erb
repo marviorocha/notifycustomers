@@ -1,27 +1,5 @@
-  <%= render "shered/flashmessager" %>
+<%= render 'shered/breadcromb' %>
 
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <!-- <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Table</a></li>
-                            <li class="active">Data table</li> -->
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content mt-3">
             <div class="animated fadeIn">
                 <div class="row">
 
@@ -48,18 +26,33 @@
                                             <td><%= c.birthday.strftime("%-d/%m/%Y") %></td>
 
                                             <td>
-                                       <%= link_to '<i class="fa fa-edit"></i> Editar'.html_safe , edit_client_path(c), class: 'btn btn-primary' %>
+             <%= link_to '<i class="fa fa-edit"></i> Editar'.html_safe , edit_client_path(c), class: 'btn btn-primary' %>
+             <%= link_to '<i class="fa fa-view"></i> Detalhes'.html_safe , client_path(c), class: 'btn btn-info' %>
 
-                                       <%= link_to "<i class='fa fa-trash' ></i> Delete".html_safe,
-                                           client_path(c),
-                                         method: :delete, data: { confirm: 'Você realmente deseja deletar ?' }, class: "btn btn-danger"  %>
+             <%= link_to "<i class='fa fa-trash' ></i> Delete".html_safe,
+                 client_path(c),
+               method: :delete, data: { confirm: 'Você realmente deseja deletar ?' }, class: "btn btn-danger"  %>
 
 
                                             </td>
                                         </tr>
                                         <% end %>
+
+
                                     </tbody>
                                 </table>
+
+                                <nav >
+                                  <ul aria-label="Page navigation example" class="pagination">
+                                    <div class="digg_pagination pagination page-item">
+
+    <%= will_paginate @client, :container => false %>
+  </div>
+
+                                  </ul>
+                                </nav>
+
+
                             </div>
                         </div>
                     </div>
@@ -67,4 +60,9 @@
 
                 </div>
             </div><!-- .animated -->
-        </div><!-- .content -->
+
+<!-- Card Aniversário  -->
+
+<%= render "birthday"  %>
+
+          </div><!-- .content -->
