@@ -1,9 +1,15 @@
+
+
+  <% Client.birthday.each do |c| %>
+  <div class="col-sm-6 col-lg-3">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Aniversáriante do mês</h5>
-    <h6 class="card-subtitle mb-2 text-muted"><%= Time.now.strftime("%B") %></h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title"><%= c.name + c.last_name %> </h5>
+    <h6 class="card-subtitle mb-2 text-muted">Aniversário: <%= c.birthday.strftime("%d/%m/%Y") %></h6>
+    <p class="card-text"><%= c.address %>.</p>
+    <a href="#" class="btn btn-success btn-sm">Notificar</a>
+
   </div>
 </div>
+</div>
+<% end %>
