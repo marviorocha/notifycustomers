@@ -19,7 +19,7 @@ Client.create(
 name: Faker::Name.name,
 last_name: Faker::Name.last_name,
 email: Faker::Internet.email,
+address: Faker::Address.full_address,
 birthday: Faker::Date.birthday(18, 65) )
-
 
 end
