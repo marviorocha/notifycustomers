@@ -2,8 +2,8 @@ class Client < ApplicationRecord
 
 
 def self.birthday
-  m = Time.now.strftime("%m")
-  Client.where(birthday: "#{m}")
+  m = Time.now.month
+  Client.where(["birthday LIKE ?","%#{m}___"])
 end
 
 end
