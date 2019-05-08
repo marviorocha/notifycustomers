@@ -3,7 +3,8 @@ class Client < ApplicationRecord
 
 def self.birthday
   m = Time.now.month
-  Client.where("birthday LIKE ?","%#{m}___")
+
+   Client.where('extract(month from birthday) = ?', m )
 end
 
 end

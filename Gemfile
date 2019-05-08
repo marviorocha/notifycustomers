@@ -23,7 +23,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'pg'
   gem 'web-console'
   gem 'listen'
   gem 'spring'
