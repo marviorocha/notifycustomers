@@ -5,12 +5,13 @@
 
 
   <div class="col-sm-60 col-lg-4">
-<div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><%= c.name + c.last_name %> </h5>
     <h6 class="card-subtitle mb-2 text-muted">Aniversário: <%= c.birthday.strftime("%d/%m/%Y") %></h6>
     <p class="card-text"><%= c.address %>.</p>
-    <a href="#" class="btn btn-success btn-sm">Notificar</a>
+    <%= link_to 'Notificar', new_notify_path, class: "btn btn-success btn-sm" %>
+
 
   </div>
 </div>

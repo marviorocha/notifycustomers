@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  messager: MyText
+  delivery: 2019-05-08 15:12:15
+  send: false
+  client: one
+
+two:
+  title: MyString
+  messager: MyText
+  delivery: 2019-05-08 15:12:15
+  send: false
+  client: two

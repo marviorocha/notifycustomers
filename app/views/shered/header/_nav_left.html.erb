@@ -52,15 +52,11 @@
                     </ul>
                 </li> -->
 
-                <h3 class="menu-title">Sistema</h3><!-- /.menu-title -->
+                <h3 class="menu-title">Sistema Notify</h3><!-- /.menu-title -->
+                <li class="menu-item-has-children dropdown">
+                  <%= link_to "<i class='fa fa-bell-o'> Notificação</i>".html_safe, notify_index_path, class: 'menu-icon'  %>
+                 </li>
 
-                <!-- <li class="menu-item-has-children dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Icons</a>
-                    <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-fort-awesome"></i><a href="font-fontawesome.html">Font Awesome</a></li>
-                        <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy Icons</a></li>
-                    </ul>
-                </li> -->
 
                 <!-- <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Charts</a>
@@ -80,7 +76,8 @@
                 </li> -->
                 <h3 class="menu-title">Configurações Extras</h3><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
+                  <%= link_to "<i class='fa fa-user'> Minha Conta</i>".html_safe, edit_user_registration_path, class: 'menu-icon'  %>
+
                     <!-- <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Login</a></li>
                         <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">Register</a></li>
