@@ -1,4 +1,4 @@
-class NotifyController < ApplicationController
+class NotifiesController < ApplicationController
 
 before_action :set_notify, only: [:edit, :update, :destroy, :create]
 
@@ -9,7 +9,7 @@ end
 
 # GET /notify/new
 def new
-   
+
 end
 
 def create

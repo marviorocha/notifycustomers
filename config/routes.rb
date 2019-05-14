@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   resources :clients
   resources :notify
-  
+  resources :notes
+
   get 'birthday', to: 'clients#birthday'
   devise_for :users
 

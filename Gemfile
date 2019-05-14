@@ -7,6 +7,7 @@ gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'pg'
+
 # My Gems
 
 gem 'devise'

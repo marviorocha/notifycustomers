@@ -25,7 +25,37 @@
                                 <h4 class="pb-2 display-5"><b>Aniversário:</b>  <%= @client.birthday.strftime("%d/%m/%Y") %> </h4>
 
                             </div>
-                          <%= link_to 'Editar', edit_client_path(@client.id), class: 'btn btn-primary' %>
+
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Titulo</th>
+                                      <th >Nota</th>
+                                      <th scope="col"></th>
+                                      <th scope="col">Deletar</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      <% @notes.each do |note| %>
+                                    <tr>
+                                      <th  scope="row"><%= note.id %></th>
+                                      <td> <b><%= note.title %></b> <br><dd>Nota:</dd><%= note.messager %></td>
+
+                                      <td class="text-muted"><%= time_ago_in_words(note.created_at).capitalize %></td>
+                                      <td><%= link_to "Deletar", note_path(note), method: :delete, data: {confirm: "Deseja deletar está anotação"}, class: "btn btn-danger" %></td>
+                                    </tr>
+                                   <% end %>
+
+
+
+
+
+
+                              <%= render "notes/form", notes: @notes %>
+
+
+
                     </div>
                 </div>
             </div>
@@ -33,14 +63,10 @@
   </div>
 </div>
 
-                    </div>
-                </div>
+</div>
+</div>
 
 
 </div>
 </div>
 </div>
-
-
-
- 

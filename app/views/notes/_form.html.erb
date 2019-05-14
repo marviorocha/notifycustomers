@@ -1,0 +1,44 @@
+
+
+
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header"> Anotação de Clientes </div>
+                <div class="card-body card-block">
+
+<%= form_with model: @client.notes.build, local:true do |f| %>
+
+
+<div class="form-row">
+<div class="col col-md-12">
+  <div class="form-group col-md-12">
+    <%= f.label :title, 'Titulo' %>:
+    <%= f.text_field :title, placeholder: 'Digite o titulo',
+    class: "form-control" %>
+    </div>
+<p></p>
+    <div class="form-group col-md-12">
+
+        <%= f.label :messager, 'Mensager:' %>
+        <%= f.text_area :messager,  class: "form-control" %>
+        <%= f.hidden_field :client_id, value: @client.id %>
+    </div>
+
+</div>
+
+</div>
+
+
+
+      <div class="form-actions form-group">
+<p></p>
+      <div class="text-left">
+          <%= f.submit "Criar notas", class: 'btn btn-success ' %>
+      </div>
+
+
+    </div>
+    <% end %>
+
+     </div>
+     </div>

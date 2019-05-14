@@ -15,7 +15,9 @@
                                             <th>Nome</th>
                                             <th>E-mail</th>
                                             <th>Aniversário:</th>
-                                            <th>Ação</th>
+                                            <th>Anotações:</th>
+                                            <th>Ação</th
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -24,6 +26,7 @@
                                             <td><b><%= c.name %></b></td>
                                             <td><%= c.email %></td>
                                             <td><%= c.birthday.strftime("%-d/%m/%Y") %></td>
+                                            <td><span class="badge badge-info"><%= c.notes.size %></span></td>
 
                                             <td>
              <%= link_to '<i class="fa fa-edit"></i> Editar'.html_safe , edit_client_path(c), class: 'btn btn-primary' %>
