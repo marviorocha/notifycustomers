@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_10_230804) do
+ActiveRecord::Schema.define(version: 2019_05_14_124626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,15 +38,15 @@ ActiveRecord::Schema.define(version: 2019_05_10_230804) do
     t.index ["client_id"], name: "index_notes_on_client_id"
   end
 
-  create_table "notifies", force: :cascade do |t|
+  create_table "notifications", force: :cascade do |t|
     t.string "title"
-    t.text "messager"
-    t.datetime "delivery"
-    t.boolean "send"
+    t.string "messager"
+    t.datetime "calendar"
+    t.boolean "notification", default: false
     t.bigint "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["client_id"], name: "index_notifies_on_client_id"
+    t.index ["client_id"], name: "index_notifications_on_client_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,5 +65,5 @@ ActiveRecord::Schema.define(version: 2019_05_10_230804) do
   end
 
   add_foreign_key "notes", "clients"
-  add_foreign_key "notifies", "clients"
+  add_foreign_key "notifications", "clients"
 end

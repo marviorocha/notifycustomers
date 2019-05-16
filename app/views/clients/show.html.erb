@@ -38,6 +38,10 @@
                                   </thead>
                                   <tbody>
                                       <% @notes.each do |note| %>
+                                      <% if note.id == "0" %>
+                                      Nenhuma anotação feita para esse cliente
+                                      <% else %>
+
                                     <tr>
                                       <th  scope="row"><%= note.id %></th>
                                       <td> <b><%= note.title %></b> <br><dd>Nota:</dd><%= note.messager %></td>
@@ -45,6 +49,7 @@
                                       <td class="text-muted"><%= time_ago_in_words(note.created_at).capitalize %></td>
                                       <td><%= link_to "Deletar", note_path(note), method: :delete, data: {confirm: "Deseja deletar está anotação"}, class: "btn btn-danger" %></td>
                                     </tr>
+                                    <% end %>
                                    <% end %>
                                  </tbody>
      </table>

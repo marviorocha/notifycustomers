@@ -19,7 +19,7 @@
                 <h3 class="menu-title">Clientes</h3><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Gerenciar</a>
+                    aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Gerenciar Clientes</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="fa fa-list"></i><a href="<%= clients_path %>">Listar Clientes</a></li>
                         <li><i class="fa fa-plus-circle"></i><%= link_to 'Novo Cliente', new_client_path %></li>
@@ -53,9 +53,15 @@
                 </li> -->
 
                 <h3 class="menu-title">Sistema Notify</h3><!-- /.menu-title -->
-                <li class="menu-item-has-children dropdown">
-                  <%= link_to "<i class='fa fa-bell-o'> Notificação</i>".html_safe, notify_index_path, class: 'menu-icon'  %>
-                 </li>
+
+             <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bell-o"></i>Notificações</a>
+                    <ul class="sub-menu children dropdown-menu">
+
+                        <li><i class="fa fa-list"></i><a href="<%= notifications_path %>">Notificações</a></li>
+                        <li><i class="fa fa-table"></i><a href="tables-data.html">Data Table</a></li>
+                    </ul>
+                </li>
 
 
                 <!-- <li class="menu-item-has-children dropdown">
@@ -75,8 +81,21 @@
                     </ul>
                 </li> -->
                 <h3 class="menu-title">Configurações Extras</h3><!-- /.menu-title -->
+
+
+
+           <li class="menu-item-has-children dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Minha Conta</a>
+                  <ul class="sub-menu children dropdown-menu">
+             
+                      <li><i class="fa fa-user-o"></i><a href="<%= edit_user_registration_path %>">Conta</a></li>
+                      <li><i class="fa fa-sign-in"></i><a href="tables-data.html">Sair</a></li>
+                  </ul>
+              </li>
+
+
                 <li class="menu-item-has-children dropdown">
-                  <%= link_to "<i class='fa fa-user'> Minha Conta</i>".html_safe, edit_user_registration_path, class: 'menu-icon'  %>
 
                     <!-- <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Login</a></li>

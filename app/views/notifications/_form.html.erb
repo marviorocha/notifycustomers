@@ -1,0 +1,48 @@
+
+<div class="content mt-3">
+  <div class="animated fadeIn">
+
+    <div class="row">
+
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-header"> <%= 'Dados do Cliente' %> </div>
+          <div class="card-body card-block">
+
+            <%= form_with model: @client.notifications.build, local:true do |f| %>
+
+
+            <div class="form-row">
+
+              <div class="form-group col-md-12">
+                <%= f.label :title, 'Titulo' %>:
+                <%= f.text_field :title, placeholder: 'Digite o titulo da notificação', class: "form-control" %>
+              </div>
+
+              <div class="form-group col-md-12">
+                <%= f.label :messager, 'Mensagem' %>:
+                <%= f.text_area :messager, placeholder: 'Mensagem', class: "form-control" %>
+              </div>
+
+              <div class="form-group col-md-12">
+
+                <%= f.label "Agendar" %>:
+                <%= f.datetime_local_field :calendar,  placeholder: '', class: "form-control" %>
+              </div>
+
+                      <%= f.hidden_field :client_id, value: params['user'] %>
+
+            <div class="form-actions form-group">
+              <p></p>
+              <div class="text-left">
+                <%= f.submit "Salvar", class: 'btn btn-success ' %>
+              </div>
+
+
+            </div>
+            <% end %>
+
+
+          </div>
+        </div>
+      </div>

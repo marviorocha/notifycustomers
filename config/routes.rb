@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :clients
-  resources :notify
+  resources :notifications
   resources :notes
 
   get 'birthday', to: 'clients#birthday'
