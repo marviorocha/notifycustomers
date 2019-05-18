@@ -18,8 +18,7 @@
 # end
 
 every 1.minute do
- runner "Notification.sending"
+ rake "whenever"
 end
-
-
+ 
 # Learn more: http://github.com/javan/whenever

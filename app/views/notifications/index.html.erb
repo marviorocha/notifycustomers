@@ -54,19 +54,21 @@
 
 
 <p></p>
-<% @notification_send.each do |sender| %>
+
 
 <ul class="list-group">
   <li class="list-group-item">  <strong class="card-title font-weight-bold">Notificações enviadas</strong></li>
 
-
-  <li class="list-group-item list-group-item-light"><%= sender.title %> - <b> <%= sender.client.name %> </b> <%= link_to "<i class='fa fa-trash'></i>".html_safe, notification_path(sender), method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-xs btn-danger" %></li>
-
+<% @notification_send.each do |sender| %>
+  <li class="list-group-item list-group-item-light"><%= sender.title %> - <b> <%= sender.client.name %> </b>
+     <%= link_to "<i class='fa fa-trash'></i>".html_safe, notification_path(sender),
+     method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-xs btn-danger text-right" %></li>
+<% end %>
 </ul>
 
 
- 
-<% end %>
+
+
 
           </div>
         </div>
