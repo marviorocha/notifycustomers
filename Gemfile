@@ -12,7 +12,7 @@ gem 'pg'
 
 gem 'devise'
 gem 'faker'
-gem 'whenever'
+gem 'whenever', require: false
 gem 'onesignal'
 gem 'will_paginate'
 

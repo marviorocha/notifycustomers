@@ -9,10 +9,12 @@ def index
 @notification_send = Notification.where(notification: 1)
 
 
+
 end
 
 def new
 @client = Client.find(params[:user])
+@notification = @client.notifications.new
 end
 
 # Get /notification
@@ -35,7 +37,19 @@ def destroy
   end
 end
 
+def edit
 
+end
+
+def update
+
+  if @notification.update(notifications_params)
+    redirect_to notifications_path, notice: "Notificação atualizada com sucesso"
+  else
+    flash[:alert] = @notification.errors.full_messages.to_sentence
+    render :edit
+end
+end
 
 private
 

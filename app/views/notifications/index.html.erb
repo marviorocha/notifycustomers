@@ -14,9 +14,9 @@
               <tr>
                 <th>Titulo:</th>
                 <th>Para:</th>
-                <th>Agendado:</th>
-                <th>Anotações:</th>
-                <th>Ação</th
+                <th>Agendado em:</th>
+                <th>Anotações do cliente:</th>
+                <th>Ação</th>
 
                 </tr>
               </thead>
@@ -24,15 +24,25 @@
             <% @notification.each do |notification| %>
                 <tr>
                   <td><%= notification.title %></td>
-                  <td><%= notification.client.name %></td>
-                  <td>  </td>
-                  <td><span class="badge badge-info"> </span></td>
-                  <td><%= link_to "Excluir", notification_path(notification), method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-danger" %></td>
+                  <td><b><%= notification.client.name %></b></td>
+                  <td><span class="badge badge-info">
+                     <%= notification.calendar.strftime("%d/%m/%Y %-l:%M %P") %> </span> </td>
                   <td>
+                    <% if notification.client.notes.size > 0  %>
+                    <a href="<%= client_path(notification.client.id) %>" type="button" class="btn btn-primary">
+                      Anotações <span class="badge badge-light"> <%= notification.client.notes.size %> </span>
+                    </a>
+                    <% else %>
+                    <% end %>
+                   </td>
+                  <td>
+<%= link_to "Editar", edit_notification_path(notification), class: "btn btn-info" %>
+                    <%= link_to "Excluir", notification_path(notification), method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-danger" %></td>
+                  </td>
           <% end %>
 
 
-                  </td>
+
                 </tr>
 
 
@@ -41,25 +51,21 @@
             <p></p>
 
 
-    <strong class="card-title">Notificações enviadas</strong>
+
 
 <p></p>
 <% @notification_send.each do |sender| %>
-    <div class="list-group">
-      <a href="#" class="list-group-item ">
-        <span class="fa fa-paper-plane"></span>
-      <span class="pull-right">
 
-      </span><%= sender.title %>
-        <span class="pull-right">
-          <button class="btn btn-xs btn-info">Agendar</button>
-
-          <%= link_to "<i class='fa fa-trash'></i>".html_safe, notification_path(sender), method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-xs btn-danger" %>
+<ul class="list-group">
+  <li class="list-group-item">  <strong class="card-title font-weight-bold">Notificações enviadas</strong></li>
 
 
-        </span>
-      </a>
-    </div>
+  <li class="list-group-item list-group-item-light"><%= sender.title %> - <b> <%= sender.client.name %> </b> <%= link_to "<i class='fa fa-trash'></i>".html_safe, notification_path(sender), method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-xs btn-danger" %></li>
+
+</ul>
+
+
+ 
 <% end %>
 
           </div>

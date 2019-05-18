@@ -1,13 +1,12 @@
 class Notification < ApplicationRecord
   belongs_to :client
 
-def passed_notification
+def self.sending
 
 @datenow = Time.now
 
-  if @datenow
-    Notification.where(notification: 0)
-  end
+@notif = Notification.where("calendar <= ?", @datenow.ago(1.hour))
+@notif.update(notification: 1)
 
 end
 

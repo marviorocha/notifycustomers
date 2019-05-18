@@ -9,7 +9,7 @@
           <div class="card-header"> <%= 'Dados do Cliente' %> </div>
           <div class="card-body card-block">
 
-            <%= form_with model: @client.notifications.build, local:true do |f| %>
+            <%= form_with model: notification, local:true do |f| %>
 
 
             <div class="form-row">
@@ -27,10 +27,10 @@
               <div class="form-group col-md-12">
 
                 <%= f.label "Agendar" %>:
-                <%= f.datetime_local_field :calendar,  placeholder: '', class: "form-control" %>
+                <%= f.text_field :calendar, class: "form-control datepicker" %>
               </div>
 
-                      <%= f.hidden_field :client_id, value: params['user'] %>
+                      <%= f.hidden_field :client_id %>
 
             <div class="form-actions form-group">
               <p></p>
@@ -42,7 +42,7 @@
             </div>
             <% end %>
 
-
+ 
           </div>
         </div>
       </div>

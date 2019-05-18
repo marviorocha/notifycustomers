@@ -1,7 +1,8 @@
 class Client < ApplicationRecord
 
   has_many :notes, dependent: :destroy
-  has_many :notifications, -> { where notification: true },
+  has_many :comments, dependent: :destroy
+  has_many :notifications, -> { where notification: false },
                               dependent: :destroy
 
 

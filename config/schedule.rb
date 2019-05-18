@@ -17,4 +17,9 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
+every 1.minute do
+ runner "Notification.sending"
+end
+
+
 # Learn more: http://github.com/javan/whenever
