@@ -1,25 +1,13 @@
 class ClientsController < ApplicationController
+
   before_action :set_client, only: [:show, :edit, :update, :destroy]
   # GET /clients
   def index
 
-    # onsignal = OneSignal::Client.new(auth_token: 'YTFmZmQ0MjQtNmRkYy00MTM3LWFjNGMtNGU5NTIxNWNkZjBj',
-    #                                 app_id: 'ffc48929-efe2-494c-a3ce-8e23528623f8')
-    # params = {"app_id" => "ffc48929-efe2-494c-a3ce-8e23528623f8",
-    #           "headings" => {"pt-br"=> 'Bem-vindo ao Custumers Notify'},
-    #           "chrome_web_icon" => '',
-    #           "contents" => {"pt-br" => ''},
-    #           "send_after" => Time.now,
-    #           "included_segments" => ["All"]}
-    # onsignal.notifications.create(params)
-
-
     @client =  Client.order(id: :desc).paginate(:page => params[:page], per_page: 15)
- 
 
 
   end
-
 
 
 

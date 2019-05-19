@@ -19,7 +19,5 @@
 //= require chart.js/dist/Chart.bundle.min
 //= require js/dashboard
 //= require js/widgets
-//= require jqvmap/dist/jquery.vmap.min
-//= require jqvmap/examples/js/jquery.vmap.sampledata
-//= require jqvmap/dist/maps/jquery.vmap.world
 //= require notification_calendar
+ 

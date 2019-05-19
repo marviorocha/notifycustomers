@@ -15,6 +15,10 @@ end
 def new
 @client = Client.find(params[:user])
 @notification = @client.notifications.new
+# Send notification for email client
+
+
+
 end
 
 # Get /notification

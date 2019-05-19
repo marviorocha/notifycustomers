@@ -22,6 +22,8 @@
               </thead>
               <tbody>
             <% @notification.each do |notification| %>
+
+
                 <tr>
                   <td><%= notification.title %></td>
                   <td><b><%= notification.client.name %></b></td>
@@ -36,6 +38,7 @@
                     <% end %>
                    </td>
                   <td>
+
 <%= link_to "Editar", edit_notification_path(notification), class: "btn btn-info" %>
                     <%= link_to "Excluir", notification_path(notification), method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-danger" %></td>
                   </td>
@@ -60,6 +63,9 @@
   <li class="list-group-item">  <strong class="card-title font-weight-bold">Notificações enviadas</strong></li>
 
 <% @notification_send.each do |sender| %>
+
+
+
   <li class="list-group-item list-group-item-light"><%= sender.title %> - <b> <%= sender.client.name %> </b>
      <%= link_to "<i class='fa fa-trash'></i>".html_safe, notification_path(sender),
      method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-xs btn-danger text-right" %></li>
