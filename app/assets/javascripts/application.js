@@ -11,8 +11,6 @@
 // about supported directives.
 
 //= require jquery/dist/jquery.min.js
-//= require popper.js/dist/umd/popper.min
-//= require bootstrap/dist/js/bootstrap.min
 //= require daterangepicker/moment.min
 //= require daterangepicker/daterangepicker
 //= require notification_calendar
