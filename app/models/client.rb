@@ -5,9 +5,8 @@ class Client < ApplicationRecord
   has_many :notifications, -> { where notification: false },
                               dependent: :destroy
 
-
-# validates :name, presence: true, length: { minimum: 3 }
-# validates :email, uniqueness: true
+ validates :name, presence: true, length: { minimum: 3 }
+ validates :email, uniqueness: true
 
 
 def self.birthday

@@ -2,26 +2,24 @@ class NotificationsController < ApplicationController
 
 before_action :set_notifications, only: [:edit, :destroy, :update, :show]
 
+
 # Get /notification/
 def index
 
 @notification = Notification.where(notification: 0)
 @notification_send = Notification.where(notification: 1)
 
-
-
 end
 
+# Get /notification/new
 def new
+# Send notification for email client
 @client = Client.find(params[:user])
 @notification = @client.notifications.new
-# Send notification for email client
-
-
 
 end
 
-# Get /notification
+# Post /notifications
 def create
   @notification = Notification.new(notifications_params)
 
@@ -54,6 +52,7 @@ def update
     render :edit
 end
 end
+
 
 private
 
