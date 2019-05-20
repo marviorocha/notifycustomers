@@ -11,7 +11,8 @@
 // about supported directives.
 
 //= require rails-ujs
-//= require jquery/dist/jquery.min.js
 //= require daterangepicker/moment.min
 //= require daterangepicker/daterangepicker
+ 
 //= require notification_calendar
+ 
