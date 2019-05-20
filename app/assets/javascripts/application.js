@@ -12,12 +12,8 @@
 
 //= require rails-ujs
 //= require jquery/dist/jquery.min.js
-//= require daterangepicker/moment.min
-//= require daterangepicker/daterangepicker
 //= require popper.js/dist/umd/popper.min
 //= require bootstrap/dist/js/bootstrap.min
-//= require chart.js/dist/Chart.bundle.min
-//= require js/dashboard
-//= require js/widgets
+//= require daterangepicker/moment.min
+//= require daterangepicker/daterangepicker
 //= require notification_calendar
- 
