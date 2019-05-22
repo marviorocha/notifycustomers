@@ -11,12 +11,13 @@
 // about supported directives.
 
 //= require rails-ujs
-//= require js/main
-//= require jquery/dist/jquery.min
-//= require popper.js/dist/umd/popper.js
-//= require bootstrap/dist/js/bootstrap.min
-//= require js/dashboard
-//= require js/widgets
+//= require vendor/jquery/jquery.min.js
+//= require vendor/bootstrap/js/bootstrap.bundle.min
+//= require vendor/jquery-easing/jquery.easing.min
+//= require js/sb-admin-2.min
+//= require vendor/chart.js/Chart.min
+//= require js/demo/chart-area-demo
+//= require js/demo/chart-pie-demo
 //= require daterangepicker/moment.min
 //= require daterangepicker/daterangepicker
 //= require notification_calendar

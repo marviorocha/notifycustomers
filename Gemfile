@@ -5,6 +5,7 @@ ruby '2.6.3'
 gem 'rails'
 gem 'puma'
 gem 'sass-rails'
+gem 'font_awesome5_rails'
 gem 'uglifier'
 gem 'pg'
 gem 'bootsnap', require: false

@@ -14,26 +14,35 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
   </head>
-
-<body class="bg-dark">
-
  
-      <div class="sufee-login d-flex align-content-center flex-wrap">
-          <div class="container">
-              <div class="login-content">
-                  <div class="login-logo">
-                      <a href="#">
-                        <h3 style="color:#fff"> <%= title || 'Notify Costumers v0.1' %></h3>
-                          <!-- <img class="align-content" src="images/logo.png" alt=""> -->
-                      </a>
-                  </div>
 
-                      <%= yield %>
 
-              </div>
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+               <%= yield %>
+           
           </div>
+        </div>
+
       </div>
 
+    </div>
+
+  </div>
+
+
+ 
+    
 
 
       <%= javascript_include_tag 'application' %>

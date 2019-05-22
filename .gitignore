@@ -31,3 +31,4 @@
 /config/master.key
 
 #ignore heroku Procfile
+node_modules
