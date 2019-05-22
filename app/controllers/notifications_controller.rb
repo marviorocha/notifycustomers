@@ -26,7 +26,7 @@ def create
   if @notification.save
   redirect_to notifications_path, notice: "Notificação foi criada com sucesso"
   else
-  render :index, alert: @notification.errors.full_messages.to_sentece
+  render :index, alert: @notification.errors.full_messages.to_sentence
   end
 
 end

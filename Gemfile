@@ -7,6 +7,7 @@ gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'pg'
+gem 'bootsnap', require: false
 
 # My Gems
 
@@ -17,7 +18,6 @@ gem 'onesignal'
 gem 'will_paginate'
 
 # End My Gems
-gem 'bootsnap', require: false
 
 group :development, :test do
   gem 'pry'
