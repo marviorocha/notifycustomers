@@ -1,4 +1,9 @@
 ---
 pt-BR:
-    company_name: "Notify Customers"
-    version: "v0.1"
+    company_name: "Customers Notify"
+    version: "1.0-rc"
+#    sidebar
+    dash: 'Dashboard'
+    
+
+

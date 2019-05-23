@@ -11,10 +11,12 @@
 // about supported directives.
 
 //= require rails-ujs
-//= require jquery
+//= require jquery/dist/jquery.min.js
 //= require vendor/bootstrap/js/bootstrap.bundle.min
 //= require vendor/jquery-easing/jquery.easing.min
 //= require js/sb-admin-2.min
+//= require datatables.net-bs4/js/dataTables.bootstrap4.min.js
+//= require js/components/datatables.js
 //= require vendor/chart.js/Chart.min
 //= require daterangepicker/moment.min
 //= require daterangepicker/daterangepicker
