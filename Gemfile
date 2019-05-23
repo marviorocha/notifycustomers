@@ -6,6 +6,7 @@ gem 'rails'
 gem 'puma'
 gem 'sass-rails'
 gem 'font_awesome5_rails'
+gem 'jquery-rails'
 gem 'uglifier'
 gem 'pg'
 gem 'bootsnap', require: false

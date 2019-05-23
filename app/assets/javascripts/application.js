@@ -10,14 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
+//= require jquery
 //= require rails-ujs
-//= require vendor/jquery/jquery.min.js
 //= require vendor/bootstrap/js/bootstrap.bundle.min
 //= require vendor/jquery-easing/jquery.easing.min
 //= require js/sb-admin-2.min
 //= require vendor/chart.js/Chart.min
-//= require js/demo/chart-area-demo
-//= require js/demo/chart-pie-demo
 //= require daterangepicker/moment.min
 //= require daterangepicker/daterangepicker
 //= require notification_calendar
