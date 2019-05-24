@@ -17,7 +17,7 @@ gem 'devise'
 gem 'faker'
 gem 'whenever', require: false
 gem 'onesignal'
-gem 'will_paginate'
+
 
 # End My Gems
 

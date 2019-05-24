@@ -15,8 +15,9 @@
 //= require vendor/bootstrap/js/bootstrap.bundle.min
 //= require vendor/jquery-easing/jquery.easing.min
 //= require js/sb-admin-2.min
-//= require datatables.net-bs4/js/dataTables.bootstrap4.min.js
-//= require js/components/datatables.js
+//= require datatables.net/js/jquery.dataTables
+//= require datatables.net-bs4/js/dataTables.bootstrap4.min
+//= require js/components/datatables
 //= require vendor/chart.js/Chart.min
 //= require daterangepicker/moment.min
 //= require daterangepicker/daterangepicker

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <% title = yield:title %>
-    <title><%= title || tags['company_name'] %></title>
+    <title><%=  title + ' — ' + t('company_name')   %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
  
@@ -58,13 +58,7 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
+  <%= render 'shered/footer' %>
       <!-- End of Footer -->
 
     </div>

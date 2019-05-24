@@ -2,7 +2,7 @@
 <html>
   <head>
     <% title = yield(:title)  %>
-    <title><%= title  || 'Notify Custumers v0.1' %> <%= tags['company_name'] %> </title>
+    <title><%= t('company_name') + ' — ' + title  %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">

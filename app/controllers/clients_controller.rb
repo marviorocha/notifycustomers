@@ -4,7 +4,7 @@ class ClientsController < ApplicationController
   # GET /clients
   def index
 
-    @client =  Client.order(id: :desc).paginate(:page => params[:page], per_page: 15)
+    @client =  Client.all
 
 
   end
