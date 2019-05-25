@@ -1,63 +1,60 @@
-        <% title('Clientes') %>
+  <div class="container-fluid">
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary"><%= title('Dados do clientes - ') + @client.name  %></h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+            <div class="card-body">
+            <span class="pb-2 display-5"><b>Nome:</b> <%= @client.name + ' ' + @client.last_name %></span> <br>
+            <span class="pb-2 display-5"><b>E-mail:</b> <%= @client.email %> </span> <br>
+            <span class="pb-2 display-5"><b>Telefone:</b> <%= @client.tel %> </span> <br>
+            <span class="pb-2 display-5"><b>Celular:</b> <%= @client.cel %> </span> <br>
+            <span class="pb-2 display-5"><b>Cpf:</b> <%= @client.cpf %> </span> <br>
+            <span class="pb-2 display-5"><b>Endereço:</b> <%= @client.address %> </span><br>
+            <span class="pb-2 display-5"><b>Aniversário:</b> <%= @client.birthday.strftime("%d/%m/%Y") %> </span>
+        <p></p>
+            <span class="pb-2 display-5">
+             <%= link_to '<i class="fas fa-paper-plane"></i> Enviar Notificação'.html_safe, new_notification_path(user: @client.id), class: "btn btn-success" %>
+            </span>
+          </div>
+       </div>
+     </div>
+  
 
-        <div class="row">
 
-          <div class="col-lg-12">
-
-            <!-- Default Card Example -->
-            <div class="card mb-4">
-              <div class="card-header">
-                #ID <%= @client.id %>
-              </div>
+ <div class="card-body">
+ <h4> <span style="color:#dd0042" "> <i class="fas fa-clipboard-list fa-lg"></i></span> Anotações para cliente</h4>
+ <hr>
+ <ul class="nav flex-column">
+  <% @notes.each do |note| %>
+     <li class="nav-item">
+        <div class="card mb-3 py-3 border-left-info">
+        
               <div class="card-body">
-                <span class="pb-2 display-5"><b>Nome:</b> <%= @client.name %></span> <br>
-                <span class="pb-2 display-5"><b>E-mail:</b> <%= @client.email %> </span> <br>
-                <span class="pb-2 display-5"><b>Telefone:</b> <%= @client.tel %> </span> <br>
-                <span class="pb-2 display-5"><b>Celular:</b> <%= @client.cel %> </span> <br>
-                <span class="pb-2 display-5"><b>Cpf:</b> <%= @client.cpf %> </span> <br>
-                <span class="pb-2 display-5"><b>Endereço:</b> <%= @client.address %> </span><br>
-                <span class="pb-2 display-5"><b>Aniversário:</b> <%= @client.birthday.strftime("%d/%m/%Y") %> </span>
+
+     <h4><%= note.title %> </h4>
+                    <span class="text-sm-left text-muted "> <i class="fa fa-history" aria-hidden="true"></i> <%= time_ago_in_words(note.created_at) %></span>
+        <div class="d-flex align-items-end flex-column">
+
+        <%= link_to "<i class='fas fa-trash-alt'></i> Deletar".html_safe, note_path(note), metho: :delete, data: {confirm:"Desejar deletar essa nota?"}, class: 'btn-danger btn btn-sm text-right'  %>
+        </div>     
+                   
+         
+              
+                  <%= note.messager %>
               </div>
             </div>
           </div>
-<% print 'some text some text ' %>
-  
-
-        </div>
-
+     </li>
+   
+ </ul>
  
+   
 
-        <table class="table table-bordered" width="100%" cellspacing="0" class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Titulo</th>
-              <th>Nota</th>
+ </div>
 
-              <th scope="col">Deletar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @notes.each do |note| %>
-            <% if note.id == "0" %>
-            Nenhuma anotação feita para esse cliente
-            <% else %>
-
-            <tr>
-              <th scope="row"><%= note.id %></th>
-              <td> <b><%= note.title %></b> <br>
-                <dd>Nota:</dd><%= note.messager %>
-              </td>
-
-              <td class="text-muted"><%= time_ago_in_words(note.created_at).capitalize %></td>
-              <td>
-                <%= link_to "Deletar", note_path(note), method: :delete, data: {confirm: "Deseja deletar está anotação"}, class: "btn btn-danger" %>
-              </td>
-            </tr>
-            <% end %>
-            <% end %>
-          </tbody>
-        </table>
+<% end %>
 
 
 
@@ -66,18 +63,5 @@
 
 
 
-
-        </div>
-        </div>
-        </div>
-
-        </div>
-        </div>
-
-        </div>
-        </div>
-
-
-        </div>
-        </div>
+ 
        

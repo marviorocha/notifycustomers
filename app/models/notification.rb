@@ -13,7 +13,7 @@ def self.sending
   @notif = Notification.where("calendar < ?", @datenow.ago(1.minute))
   @notif.update(notification: 1)
 
-  @notification = Notification.where("calendar >= ?", @datenow.ago(1.minute))
+  @notification = Notification.where("calendar < ?", @datenow.ago(1.minute))
 
 # Sender notification for email now
   @notification.each do |sender|
