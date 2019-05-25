@@ -8,8 +8,8 @@
                        <%= render "shered/flashmessager" %>
                   </div>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'form') do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'form') do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
                 
                     <div class="form-group">
                      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Digite seu e-mail", class: "form-control form-control-user"  %>
@@ -57,4 +57,4 @@
 
 
 
-<%# render "devise/shared/links" %>
+<%= render "devise/shared/links" %>

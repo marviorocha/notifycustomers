@@ -5,16 +5,15 @@ class ApplicationController < ActionController::Base
   layout :template_resource
   helper :all
 
-    private
+  private
 
     def template_resource
-       if user_signed_in? == false
-         "login"
-       else
-         "application"
-       end
+      if user_signed_in? == false
+      "login"
+      else
+      "application"
+      end
     end
-
 
 
 end

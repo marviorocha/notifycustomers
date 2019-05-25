@@ -1,15 +1,12 @@
 
-<div class="content mt-3">
-  <div class="animated fadeIn">
+  <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"><%= title('Enviar Notificação') %></h6>
+                </div>
+                <div class="card-body">
+                   
 
-    <div class="row">
-
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-header"> <%= 'Dados do Cliente' %> </div>
-          <div class="card-body card-block">
-
-            <%= form_with model: notification, local:true do |f| %>
+<%= form_with model: notification, local:true do |f| %>
 
 
             <div class="form-row">
@@ -21,28 +18,31 @@
 
               <div class="form-group col-md-12">
                 <%= f.label :messager, 'Mensagem' %>:
-                <%= f.text_area :messager, placeholder: 'Mensagem', class: "form-control" %>
+                <%= f.text_area :messager, placeholder: 'Mensagem', class: "form-control form-control-user" %>
               </div>
 
               <div class="form-group col-md-12">
-
                 <%= f.label "Agendar" %>:
                 <%= f.text_field :calendar, class: "form-control datepicker" %>
               </div>
 
-                      <%= f.hidden_field :client_id %>
+                <%= f.hidden_field :client_id %>
 
             <div class="form-actions form-group">
               <p></p>
               <div class="text-left">
                 <%= f.submit "Salvar", class: 'btn btn-success ' %>
               </div>
-
-
             </div>
             <% end %>
 
- 
-          </div>
+              
         </div>
-      </div>
+                  <hr>
+                  Styling for the area chart can be found in the <code>/js/demo/chart-area-demo.js</code> file.
+                </div>
+              </div>
+
+
+   
+    

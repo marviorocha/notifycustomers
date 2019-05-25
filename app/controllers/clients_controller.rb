@@ -6,7 +6,6 @@ class ClientsController < ApplicationController
 
     @client =  Client.all
 
-
   end
 
 

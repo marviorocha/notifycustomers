@@ -19,7 +19,7 @@
                     <div class="dropdown for-notification">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell"></i>
-                            <span class="count bg-danger"><%= Notification.where(notification: 0).count %></span>
+                            <span class="count bg-danger"></span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="notification">
                             <p class="red"><%= Notification.where(notification: 0).count %> notificações agendadas</p>

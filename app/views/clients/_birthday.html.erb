@@ -1,29 +1,41 @@
-
-<h3>Aniversariantes do mês</h3>
-<p></p
+ 
+ 
 <% Client.birthday.each do |c| %>
+<div class="col-xl-3 col-md-6 mb-4">
 
 
-  <div class="col-sm-6 col-lg-3">
-  <div class="card">
-  <div class="card-body">
-    <h5 class="card-title"><%= c.name %> <%= c.last_name %> </h5>
-    <h6 class="card-subtitle mb-2 text-muted"><% if c.birthday.strftime("%d") == Time.now.strftime("%d") %>
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-sm font-weight-bold text-success text-uppercase mb-1"><%= c.name %> <%= c.last_name %></div>
 
+                      <div class="h5 mb-0  text-gray-800">
+                      <% if c.birthday.strftime("%d") == Time.now.strftime("%d") %>
+                      <span class="badge badge-pill badge-info">Parabéns, é seu hoje!
+                      </span>
+                       <% else %>
+                      <span class="text-sm-left"><%= time_ago_in_words(c.birthday.strftime("%d/%m/%Y")) %></span>
+                      <% end %>
+                     <p></p>
+                              <%= link_to 'Notificar', new_notification_path(user: c.id), class: "btn btn-success btn-sm btn-block" %>
+                       </div>
+                       <p>
+               
+                       </p>
+                    </div>
+                    
+                    <div class="col-auto">
+                    <% if c.birthday.strftime("%d") == Time.now.strftime("%d") %>
+                    <i class="fa fa-birthday-cake fa-2x text-gray-300" aria-hidden="true"></i>
+                    <% else %>
+                      <i class="fas fa-clock fa-2x text-gray-300"></i>
+                     <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-<span class="badge badge-pill badge-info">Parabéns, Aniversário é hoje!</span>
-
-                                                                  <% else %>
-
-                                                            <b>Idade:</b>  <%= time_ago_in_words(c.birthday.strftime("%d/%m/%Y")) %>
-                                                                  <% end %>
-
-                                                                   </h6>
-    <p class="card-text"><%= c.address %>.</p>
-    <%= link_to 'Notificar', new_notification_path(user: c.id), class: "btn btn-success btn-sm" %>
-
-
-  </div>
-</div>
-</div>
+ 
 <% end %>
