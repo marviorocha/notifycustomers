@@ -10,11 +10,11 @@ module ApplicationHelper
     timenow = Time.now.hour
     case timenow
       when 0..11
-        "Bom dia! #{current_user.name}"
+        "<b>Bom dia!</b> #{current_user.name}".html_safe
       when 12..17
-        "Boa tarde! #{current_user.name}"
+        "<b>Boa tarde!</b> #{current_user.name}".html_safe
       when 18..23
-        "Boa noite! #{current_user.name}"
+        "<b>Boa noite!</b> #{current_user.name}".html_safe
       end
 
   end

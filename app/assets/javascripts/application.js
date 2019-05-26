@@ -22,3 +22,4 @@
 //= require daterangepicker/moment.min
 //= require daterangepicker/daterangepicker
 //= require notification_calendar
+//= require calendar
