@@ -4,8 +4,7 @@
 # http://en.wikipedia.org/wiki/Cron
 
 # Example:
-#
-# set :output, "/path/to/my/cron_log.log"
+# set :output, "/home/marviorocha/cron_log.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -17,8 +16,11 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
+# Heroku Prodution Whenever
 every 1.minute do
  rake "whenever"
 end
+
+
  
 # Learn more: http://github.com/javan/whenever

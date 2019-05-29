@@ -66,10 +66,11 @@
 
           <% @notification_send.each do |sender| %>
 
-          <li class="list-group-item list-group-item-light"><%= sender.title %> - <b>
-              <%= sender.client.name %> </b>
-            <%= link_to "<i class='fa fa-trash'></i>".html_safe, notification_path(sender),
-method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-xs btn-danger text-right" %></li>
+          <li class="list-group-item list-group-item-light"> <%= link_to "<i class='fa fa-trash'></i>".html_safe, notification_path(sender),
+method: :delete, data: {confirm: "Deseja deletar esse item?"}, class: "btn btn-xs btn-danger text-right" %>  <b><%= sender.client.name %></b> - 
+ <%= sender.title %> -
+              Enviado:  <i class="fa fa-clock" aria-hidden="true"></i> <%= time_ago_in_words(sender.calendar) %> 
+            </li>
           <% end %>
         </ul>
 

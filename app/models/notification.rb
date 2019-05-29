@@ -10,11 +10,11 @@ class Notification < ApplicationRecord
 def self.sending
 
   @datenow = Time.now
-  @notif = Notification.where("calendar < ?", @datenow.ago(1.minute))
+  @notif = Notification.where("calendar < ?", @datenow)
   @notif.update(notification: 1)
 
-  @notification = Notification.where("calendar < ?", @datenow.ago(1.minute))
-
+  @notification = Notification.where("updated_at >= ?", @datenow )
+ 
 # Sender notification for email now
   @notification.each do |sender|
     NotificationMailer.send_notification(sender.client.email,
