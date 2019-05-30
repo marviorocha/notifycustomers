@@ -4,13 +4,17 @@
 
 
 
-This a project where we work easily with notfys of customers Hested by Heroku (https://notifycustomers.herokuapp.com/)
+This a project where we work easily with notfys of customers 
+Hested by Heroku (https://notifycustomers.herokuapp.com/)
+
+User: admin@admin.com
+Password: admin123
 
 Things you may want to cover:
 
 ### Version:
 
-Build vesion: [v0.1](https://github.com/marviorocha/notifycustomers/releases)
+Build in vesion: [v1.0](https://github.com/marviorocha/notifycustomers/releases)
 
 ### Gems
 
