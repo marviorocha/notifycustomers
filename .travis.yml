@@ -6,4 +6,3 @@ rvm:
   - 2.6.3
   - jruby
   - truffleruby
-install: gem install rails

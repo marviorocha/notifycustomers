@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'uglifier'
 gem 'pg'
 gem 'bootsnap', require: false
-
+gem 'bcrypt'
 # My Gems
 
 gem 'devise'
